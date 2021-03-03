@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link rel="stylesheet" href="../static/css/cropprediction5.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">JKN</div>
+        <div class="home" onclick="home()"> <i class="fa fa-home"></i>
+            <span>HOME</span>
+        </div>
+    </div>
+    
+        <h1>Crop Recommendation 5</h1>
+
+       <div class="output">
+       <div class="text-content">
+
+       </div>
+       </div>
+
+        <div class="btns">
+            <button class="btn" onclick="predictAgain()">Predict Again</button>
+        </div>
+
+    <nav class="progress-bar">
+        <ul>
+            <li><a href="#" class="active"></a></li>
+            <li><a href="#" class="active"></a></li>
+            <li><a href="#" class="active"></a></li>
+            <li><a href="#" class="active"></a></li>
+            <li><a href="#" class="active"></a></li>
+            
+        </ul>
+    </nav>
+
+    <script>
+
+        function home(){
+        //   Put the Url here
+            location.href="/";
+        }
+    
+
+    //    fetch("http://localhost:3000/croprecommendation")
+    //    .then((res)=>{
+    //        let obj=res.json();
+    //        console.log(obj);
+    //    })
+
+       let v1="Rice";
+       let v2="Pusa Basmati";
+       let crop="Crop Predicted : "+v1;
+       let seed="Seed Type : "+v2; 
+       let container=document.querySelector(".text-content");
+       let ele1=document.createElement("p");
+       let text1=document.createTextNode(crop);
+       let ele2=document.createElement("p");
+       let text2=document.createTextNode(seed);
+       ele1.appendChild(text1);
+       ele2.appendChild(text2);
+       container.appendChild(ele1);
+       container.appendChild(ele2);
+       ele1.style.margin="1rem";
+       ele2.style.margin="1rem";
+
+      function predictAgain(){
+          location.href="/cropprediction1";
+      }
+       
+  
+    </script>
+    
+</body>
+</html>

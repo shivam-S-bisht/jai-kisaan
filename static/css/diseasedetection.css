@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .logo{
+    font-size: 1.5rem;
+    color: purple;
+    padding: 4px;
+    font-weight: 900;
+}
+
+.header .home{
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10%;
+    text-align: center;
+    padding: 5px;
+    font-weight: 900;
+}
+
+h1{
+    color: purple;
+    text-align: center;
+}
+
+.drop-area{
+    width: 30%;
+    height: 40%;
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    background-color: rgb(247, 238, 238);
+    text-align: center;
+    border: 1px dashed gray;
+}
+
+.dropped{
+    border: 3px solid gray;
+    background-color: rgb(212, 206, 206);
+}
+
+.drop-area .icon{
+    font-size: 4rem;
+    border: 1px solid green;
+    border-radius:2rem ;
+    padding: 10px;
+    position: absolute;
+    left: 39%;
+    top: 30%;
+    color: green;
+}
+
+.drop-area h3{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 70%;
+}
+
+.btn{
+    width: 30%;
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    text-align: center;
+}
+
+.btn .button{
+    width: 80%;
+    height: 4rem;
+    border: none;
+    outline: none;
+    background-color: green;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    cursor: pointer;
+}
+
+
+.btn .predict{
+    width: 80%;
+    height: 4rem;
+    border: none;
+    outline: none;
+    background-color: green;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    cursor: pointer;
+
+}
+
+@media (max-width:800px){
+    h1{
+        font-size: 1.7rem;
+    }
+
+    .drop-area{
+        width: 35%;
+        left: 32%;
+    }
+
+    .drop-area .icon{
+        font-size: 3rem;
+        left: 34%;
+    }
+
+    .btn .button{
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:550px){
+     
+    h1{
+        font-size: 1.4rem;
+    }
+
+    .drop-area{
+        width: 40%;
+        height: 32%;
+        left: 30%;
+    }
+
+    .drop-area .icon{
+        font-size: 2.2rem;
+        top: 20%;
+        left: 32%;
+    }
+
+    .btn{
+        top: 60%;
+    }
+
+    .btn .button{
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    h3{
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width:380px){
+    .btn .button{
+        font-size: 0.6rem;
+        height: 5rem;
+    }
+
+}
