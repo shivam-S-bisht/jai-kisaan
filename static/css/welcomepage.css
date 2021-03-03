@@ -9,7 +9,7 @@
 .outerdiv{
     width: 100vw;
     height: 100vh;
-    background-image: url(./img/farmer3.svg);
+    background-image: url(../img/farmer3.svg);
     background-color: #cccccc; 
     background-position: center; 
     background-repeat: no-repeat; 

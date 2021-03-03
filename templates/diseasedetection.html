@@ -14,7 +14,7 @@
 
     <div class="header">
         <div class="logo">JKN</div>
-        <div class="home"> <i class="fa fa-home"></i>
+        <div class="home" onclick="home()"> <i class="fa fa-home"></i>
             <span>HOME</span>
         </div>
     </div>
@@ -38,6 +38,15 @@
     
 
    <script>
+
+function home(){
+    //   Put the Url here
+      location.href="/";
+  }
+
+
+
+
        const droparea=document.querySelector(".drop-area");
        droparea.addEventListener('dragover', (event)=>{
            event.preventDefault();
