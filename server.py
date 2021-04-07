@@ -83,16 +83,16 @@ def whatwedo():
 # detect disease of the crop
 @app.route("/detectdisease", methods=["GET", "POST"])
 def detect_disease():
-
+    print(request)
     img = request.files["image"].read()                         # getting the image file
     npimg = np.fromstring(img, np.uint8)                        # convert string file obj. to np array
     img = cv2.imdecode(npimg, cv2.IMREAD_UNCHANGED)             # convert np array to image
-    re_img = cv2.resize(img, (200, 500))                        # resize the image to desired size
-    re_tensor = re_img.reshape(1, 200, 500, 3)                  # reshape the image
+    re_img = cv2.resize(img, (200, 200)) / 255.0                        # resize the image to desired size
+    re_tensor = re_img.reshape(1, 200, 200, 3)                  # reshape the image
 
-    model = tf.keras.models.load_model("final_model_ovrftd.h5")     # loads the model
+    model = tf.keras.models.load_model("CNN_model.h5")     # loads the model
     one_hot = model.predict(re_tensor)                              # predictions predictions predictions
-
+    print(one_hot)
     return jsonify({"Disease Detected" : disease_type[int(np.argmax(one_hot, axis=1))]})      # returned the fucking disease
     
 

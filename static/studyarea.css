@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.outerdiv{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/farmer3.svg);
+    background-color: #cccccc; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.logo{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    font-weight: 100;
+    font-size: 1 rem;
+    cursor: pointer;
+
+}
+
+.home{
+    position: absolute;
+    left: 90%;
+    top: 5%;
+    font-weight: 100;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 8px;
+}
+
+.container{
+    position:absolute;
+    width: 60%;
+    height: 70%;
+    text-align: center;
+    left: 18%;
+    top: 15%;
+    padding: 20px;
+}
+
+.container a{
+    color: black;
+}
+
+.container span{
+    color:blue;
+    font-weight: bold;
+}
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: blue;
+    width: 100%;
+    word-spacing: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.content h3{
+    color: black;
+}
+
+
+
+@media (max-width:850px){
+    .container{
+        width: 80%;
+        left: 10%;
+    }
+
+    .content{
+        font-size: 0.9rem;
+    }
+
+
+}

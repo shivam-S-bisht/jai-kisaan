@@ -4,97 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disease Detection</title>
-    <link rel="stylesheet" href="../static/css/diseasedetection.css">
+    <link rel="stylesheet" href="../static/diseaseDetection.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="outerdiv">
 
-    <div class="header">
-        <div class="logo">JKN</div>
-        <div class="home" onclick="home()"> <i class="fa fa-home"></i>
-            <span>HOME</span>
+        <div class="imagecontainer">
+
         </div>
+               
+            <div class="box">
+                <a href="#">Back</a> 
+                <div class="form-container">
+                    <h1>What happened to my crop?</h1>
+                    <br>
+                    <form action="/detectdisease" method="POST" enctype = "multipart/form-data">
+
+                        <div class="container image">
+                            <!-- <label for="image">Image</label> -->
+                            <p>Image</p>
+                            <input type="file" name="image" class="ele"  >
+                        </div>
+        
+                        
+                        <br><br>
+                        <div class="container submit">
+                            <input type="submit" >
+                        </div>
+        
+                     </form>
+
+          </div> 
+          </div>
+          
     </div>
-    
-    <h1>Disease Detection</h1>
-   
-
-        <div class="drop-area">
-            <i class="fa fa-download icon"></i><br><br>
-            <h3>Drag image to upload</h3>
-        </div>
-
-        <div class="btn">
-            <h3>or</h3><br>
-            <input type="file" id="button" hidden/>
-           <label class="button" for="button">Browse Image</label>
-           <input type="submit" class="predict" for="button" onclick="sendImage()"  hidden/>
-    
-        </div>
-    
-    
-
-   <script>
-
-function home(){
-    //   Put the Url here
-      location.href="/";
-  }
-
-
-
-
-       const droparea=document.querySelector(".drop-area");
-       droparea.addEventListener('dragover', (event)=>{
-           event.preventDefault();
-           droparea.classList.add("dropped");
-       })
-
-       droparea.addEventListener('dragleave', ()=>{
-           droparea.classList.remove("dropped");
-       })
-       let image;
-
-       droparea.addEventListener('drop', (event)=>{
-           event.preventDefault();
-           image=event.dataTransfer.files[0];
-           console.log(image);
-
-           document.querySelector(".button").style.display="none";
-           document.querySelector(".predict").removeAttribute("hidden");
-       })
-
-       document.querySelector("#button").addEventListener("change",(event)=>{
-           const image=event.target.files[0];
-           document.querySelector(".button").style.display="none";
-           document.querySelector(".predict").removeAttribute("hidden");
-       })
-
-
-    //    const sendImage= (event)=>{
-    //        console.log(event);
-
-    //   await fetch('https://localhost:3000/image', {
-    //         method: 'POST',
-    //         body:{
-    //             image:image
-    //         }
-    //     })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //        console.log(data)
-    //     })
-    //    .catch(error => {
-    //       console.error(error)
-    //    })
-    // }
-
-
-
-   </script>
-    
+   <script src="../static/diseaseDetection.js"></script>
 </body>
 </html>
